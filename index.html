@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <title>Dylan Hyrkas</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/03dad612bc.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <style>
-        /* Reset some default styles */
         * {
             box-sizing: border-box;
         }
@@ -29,17 +30,16 @@
         header h1 {
             margin: 0;
             font-size: 3em;
-            font-weight: normal;
         }
 
         main {
-    flex: 1; /* Allows the content to expand and push the footer down */
-    background-color: #f7f7f7; /* Your content background color */
-    padding: 2em;
-    max-width: 800px;
-    margin: 0 auto;
-    width: 100%;
-}
+            flex: 1;
+            background-color: #f7f7f7;
+            padding: 2em;
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+        }
 
         .section {
             margin-bottom: 2.5em;
@@ -75,7 +75,6 @@
 
         .link-item i {
             font-size: 50px;
-            color: #444;
             transition: color 0.3s;
         }
 
@@ -88,54 +87,13 @@
             font-size: 1em;
         }
 
-        /* Mailchimp form styling */
         #mc_embed_signup {
             background: #fff;
-            clear: left;
             font: 14px Helvetica, Arial, sans-serif;
             width: 100%;
             padding: 1em;
-            box-sizing: border-box;
             border: 1px solid #ccc;
             margin-top: 2em;
-        }
-
-        #mc_embed_signup h2 {
-            font-size: 1.5em;
-            margin-bottom: 0.5em;
-            color: #444;
-        }
-
-        #mc_embed_signup .mc-field-group {
-            margin-bottom: 1em;
-        }
-
-        #mc_embed_signup .mc-field-group label {
-            display: block;
-            margin-bottom: 0.3em;
-            font-weight: bold;
-        }
-
-        #mc_embed_signup input {
-            width: 100%;
-            padding: 0.5em;
-            font-size: 1em;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        #mc_embed_signup .button {
-            background-color: #444;
-            color: #fff;
-            border: none;
-            padding: 0.7em 1.5em;
-            font-size: 1em;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-
-        #mc_embed_signup .button:hover {
-            background-color: #333;
         }
 
         footer {
@@ -146,24 +104,38 @@
             margin-top: 2em;
         }
 
-        /* Responsive Design */
+        .custom-header {
+            background-color: #000;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .custom-row {
+            background-color: #f9f9f9;
+        }
+
+        .custom-row:hover {
+            background-color: #f1f1f1;
+        }
+
         @media (max-width: 600px) {
-    header h1 {
-        font-size: 2.5em;
-    }
+            header h1 {
+                font-size: 2.5em;
+            }
 
-    .section h2 {
-        font-size: 1.75em;
-    }
+            .section h2 {
+                font-size: 1.75em;
+            }
 
-    .link-item i {
-        font-size: 40px;
-    }
+            .link-item i {
+                font-size: 40px;
+            }
 
-    .link-item p {
-        font-size: 0.95em;
-    }
-}
+            .link-item p {
+                font-size: 0.95em;
+            }
+        }
     </style>
 </head>
 <body>
@@ -185,19 +157,19 @@
         <div class="links">
             <div class="link-item">
                 <a href="https://www.youtube.com/@Dhyrkas" target="_blank">
-                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-brands fa-youtube" style="color: #FF0000;"></i>
                     <p>YouTube Channel</p>
                 </a>
             </div>
             <div class="link-item">
                 <a href="https://www.youtube.com/@valleyvibesofficial" target="_blank">
-                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-brands fa-youtube" style="color: #FF0000;"></i>
                     <p>Valley Vibes YouTube Channel</p>
                 </a>
             </div>
             <div class="link-item">
                 <a href="https://open.spotify.com/show/5mTyEVDZ8XpFCBm5rnnyCH" target="_blank">
-                    <i class="fab fa-spotify"></i>
+                    <i class="fab fa-spotify" style="color:#1DB954;"></i>
                     <p>Spotify Song</p>
                 </a>
             </div>
@@ -207,46 +179,77 @@
     <div class="section">
         <h2>Subscribe to My Newsletter</h2>
         <p>Stay updated with the latest news, releases, and exclusive content by subscribing to my newsletter.</p>
-        <!-- Mailchimp Embed Code Starts Here -->
-        <div id="mc_embed_signup">
-            <form action="https://gmail.us12.list-manage.com/subscribe/post?u=b4638ea1de6ce3d76fdc4c25e&amp;id=a82192caa5&amp;f_id=008b88e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <div id="mc_embed_signup" class="card" style="margin-bottom: 35px;">
+            <form action="https://gmail.us12.list-manage.com/subscribe/post?u=b4638ea1de6ce3d76fdc4c25e&amp;id=a82192caa5&amp;f_id=008b88e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
                 <div id="mc_embed_signup_scroll">
-                    <!-- Form Fields -->
                     <div class="mc-field-group">
-                        <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
-                        <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required>
+                        <input class="form-control" placeholder="Email Address" type="email" name="EMAIL" required>
                     </div>
                     <div class="mc-field-group">
-                        <label for="mce-FNAME">First Name</label>
-                        <input type="text" name="FNAME" class="text" id="mce-FNAME">
+                        <input class="form-control" placeholder="First Name" type="text" name="FNAME">
                     </div>
                     <div class="mc-field-group">
-                        <label for="mce-LNAME">Last Name</label>
-                        <input type="text" name="LNAME" class="text" id="mce-LNAME">
+                        <input class="form-control" placeholder="Last Name" type="text" name="LNAME">
                     </div>
-                    <!-- Responses -->
-                    <div id="mce-responses" class="clear foot">
-                        <div class="response" id="mce-error-response" style="display:none"></div>
-                        <div class="response" id="mce-success-response" style="display:none"></div>
-                    </div>
-                    <!-- Hidden Field for Bot Prevention -->
-                    <div style="position:absolute; left:-5000px;" aria-hidden="true">
-                        <input type="text" name="b_b4638ea1de6ce3d76fdc4c25e_a82192caa5" tabindex="-1" value="">
-                    </div>
-                    <!-- Submit Button -->
                     <div class="clear foot">
-                        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+                        <input type="submit" value="Subscribe" name="subscribe" class="button">
                     </div>
                 </div>
             </form>
         </div>
-        <!-- Mailchimp Embed Code Ends Here -->
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Coming soon <i class="fa-solid fa-person-digging"></i></h5>
+                <p class="card-text">
+                    I will have a projects section soon with some of my previous projects and future ones.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card" style="margin-bottom: 35px;">
+        <div class="card-body">
+            <h5 class="card-title">Games</h5>
+            <div id="games-list"></div>
+        </div>
+    </div>
+
+    <div class="card">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeGEhBsBYEU5rlKoUbWJ-UuHfVS8Fp9h980TwO6D3W7-fFr3w/viewform?embedded=true" width="100%" height="480" frameborder="0">Loading…</iframe>
     </div>
 </main>
 
 <footer>
     <p>&copy; 2024 Dylan Hyrkas. All rights reserved.</p>
 </footer>
+<script type="text/javascript">
+    google.charts.load('current', {'packages':['table']});
+    google.charts.setOnLoadCallback(drawTable);
 
+    function drawTable() {
+        var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/170ydHAA_D4lQ2Dg-abYIbVF32ysjL0gwhgEpdsyH-lw/gviz/tq?sheet=Form+Responses+1&tq=SELECT%20C,%20D,%20E');  
+        query.send(handleQueryResponse);
+    }
+
+    function handleQueryResponse(response) {
+        if (response.isError()) {
+            alert('Error in query: ' + response.getMessage());
+            return;
+        }
+
+        var data = response.getDataTable();
+        var table = new google.visualization.Table(document.getElementById('games-list'));
+        var options = {
+            cssClassNames: {
+                headerRow: 'custom-header',
+                tableRow: 'custom-row'
+            },
+            width: '100%',
+            height: '100%'
+        };
+        table.draw(data, options);
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
